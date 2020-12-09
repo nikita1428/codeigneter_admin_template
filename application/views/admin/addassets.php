@@ -42,6 +42,7 @@
 								<label for="">Name</label>
 								<input class="form-control resetblank" placeholder="Enter name" type="text" id="name" name="name"
 									value="">
+									<p class="text-danger"><?php echo form_error('name'); ?></p>
 							</div>
 						</div>
 
@@ -50,13 +51,15 @@
 								<label for="">Address</label>
 								<input class="form-control resetblank" placeholder="Enter address" type="text" id="address"
 									name="address" value="">
+									<?php echo form_error('address'); ?>
+
 							</div>
 						</div>
             <div class="col-md-6 col-lg-6 col-sm-12">
 							<div class="form-group ">
 								<label for="">image</label>
 								<input class="form-control resetblank" type="file" id="image" name="image" value="">
-							</div>
+									</div>
 						</div>
 						
 
@@ -66,19 +69,19 @@
 							<div class="form-group ">
 								<label for="getassetstypes">Asset type</label>
 								<select class="custom-select" name="getassetstypes" id="getassetstypes">
-
+					<option> select Assets Types </option>
 
 									<?php 
-    foreach($getassetstypes as $assetstypes )
-    {
-      ?>
+                    foreach($getassetstypes as $assetstypes )
+                      {
+                      ?>
 
 									<option value="<?php echo $assetstypes ["id"] ?>"><?php echo $assetstypes ["title"] ?></option>
 									<?php 
  
-    };
+                              };
     
-  ?>
+                         ?>
 								</select>
 							</div>
 						</div>
@@ -90,16 +93,16 @@
 
 
 									<?php 
-    foreach($getassetseater as $assetseater )
-    {
-      ?>
+                                foreach($getassetseater as $assetseater )
+                                 {
+                                 ?>
 
 									<option value="<?php echo $assetseater ["id"] ?>"><?php echo $assetseater ["title"] ?></option>
 									<?php 
  
-    };
+                                   };
     
-  ?>
+                                   ?>
 								</select>
 							</div>
 						</div>
@@ -113,16 +116,16 @@
 
 
 									<?php 
-    foreach($getassetstatus as $assetstatus )
-    {
-      ?>
+                                     foreach($getassetstatus as $assetstatus )
+                                     {
+                                     ?>
 
 									<option value="<?php echo $assetstatus ["id"] ?>"><?php echo $assetstatus ["title"] ?></option>
 									<?php 
  
-    };
+                                   };
     
-  ?>
+                                   ?>
 								</select>
 							</div>
 						</div>

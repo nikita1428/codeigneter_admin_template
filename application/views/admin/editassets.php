@@ -38,13 +38,17 @@
         
       <form action="<?php echo base_url();?>Admin/Dashboardcontroller/update/<?php echo $edit['id'] ?>" method="post" enctype="multipart/form-data">
 
+	  <img src="<?php echo base_url('public/uploads/') . $edit['image']?>" style="display: block; margin-left: auto; margin-right: auto;
+       width: 50%; margin-bottom:50px; width: 150px;height:150px;   border-radius: 50%; "alt="" srcset="">
 					<div class="row">
-          
+		
 						<div class="col-md-6 col-lg-6 col-sm-12">
 							<div class="form-group ">
+
 								<label for="">Name</label>
 								<input class="form-control resetblank" placeholder="Enter name" type="text" id="name" name="name"
 									value="<?php echo $edit['name'] ?>">
+									<?php echo form_error('name'); ?>
 							</div>
 						</div>
 
@@ -53,12 +57,16 @@
 								<label for="">Address</label>
 								<input class="form-control resetblank" placeholder="Enter address" type="text" id="address"
 									name="address" value="<?php echo $edit['address'] ?>">
+									<?php echo form_error('address'); ?>
 							</div>
 						</div>
             <div class="col-md-6 col-lg-6 col-sm-12">
 							<div class="form-group ">
 								<label for="">image</label>
-								<input class="form-control resetblank" type="file" id="image" name="image" value="<?php echo $edit['image'] ?>">
+								<input class="form-control resetblank" type="file" id="image" name="image" value="">
+							<!-- if user not entered any value -->
+								<input type="hidden" name="old_image" value="<?php echo $edit['image'] ?>">
+							
 							</div>
 						</div>
 						

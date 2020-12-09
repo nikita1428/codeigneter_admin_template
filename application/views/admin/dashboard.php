@@ -31,12 +31,14 @@
       <?php 
     $id =0;
     foreach($getassets as $assets) 
-    {?>
+    {
+      ?>
             <tr>
       <th scope="row"><?php echo $id++  ?></th>
       <td><?php echo $assets['name'] ?></td>
       <td>t<?php echo $assets['address'] ?></td>
-      <td><?php echo $assets['image'] ?></td>
+      <td><img src="<?php echo base_url('public/uploads/') . $assets['image'] ?>" style="width: 50px;height:50px;   border-radius: 50%;
+" alt="" srcset=""></td>
       <td><?php echo $assets['getamenities'] ?></td>
       <td><?php echo $assets['getassetseater'] ?></td>
       <td><?php echo $assets['getassetstypes'] ?></td>
